@@ -11,11 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors({
-    origin: ["https://google-drive-clone-client.vercel.app/"],
-    methods: ["POST", "GET", "DELETE"],
-    credentials: true
-  }));
+app.use(cors());
 app.use(express.json());
 
 // API Routes
